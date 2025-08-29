@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+transformers
+torch==2.1.2
+torchvision==0.16.2+cpu
+sentence-transformers
+langdetect
+faiss-cpu
+python-multipart
+numpy==1.23.5
+requests
+beautifulsoup4
