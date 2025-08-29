@@ -3,8 +3,8 @@ import requests
 from server.utils.html_scraper import extract_text_from_url
 
 # Load API keys from environment variables
-SERPAPI_KEY = "9ab5617efed8eccbb95f4a8aa659d6e6574db7e798e7f0e0bc9b378ba83d54f3"
-CSE_API_KEY = "AIzaSyD2xMx7BlRu4hqSHU58uN77khkZ8ebr-VU"
+SERPAPI_KEY = "enter serpapi key here"
+CSE_API_KEY = "enter cse_api_key here"
 CSE_ID = os.getenv("CSE_ID")
 
 
