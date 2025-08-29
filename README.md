@@ -1,53 +1,44 @@
-# smart-multilingual-assistant
-Multilingual Retrieval-Augmented Chatbot using FAISS, SERP API, and Llama 3. Supports Indian languages via translation, provides document + web-based answers, and stores conversation history in MongoDB for context-aware, accurate responses.
+🌐 Smart Multilingual Assistant
 
-🚀 Overview
+A Multilingual Retrieval-Augmented Chatbot powered by FAISS, SERP API, and Llama 3 (GGUF) with support for Indian languages via translation.
+Provides document + web-based answers and stores conversations in MongoDB for context-aware, accurate responses.
 
-This chatbot is a hybrid RAG (Retrieval-Augmented Generation) system designed to provide reliable, multilingual, and context-aware responses. Unlike traditional chatbots that rely only on a pre-trained model, this system integrates:
+✨ Overview
 
-FAISS vector database for fast and semantic document retrieval.
+This chatbot is a hybrid RAG (Retrieval-Augmented Generation) system that combines:
 
-Web search (SERP API + web fetcher) for real-time answers when local docs don’t suffice.
+⚡ FAISS vector database → Fast & semantic document retrieval
 
-Llama 3 (GGUF) as the reasoning backbone.
+🌍 Web search (SERP API + web fetcher) → Real-time answers when local docs don’t suffice
 
-Multilingual support using translation pipelines for major Indian languages.
+🧠 Llama 3 (GGUF) → Contextual & natural reasoning backbone
 
-MongoDB persistence for storing conversation history.
+🌏 IndicTrans2 → Multilingual support for Indian languages
+
+💾 MongoDB → Persistent conversation history
 
 🔑 Features
 
-🌐 Hybrid Knowledge Source → Retrieves from local FAISS + falls back to Google search.
+✅ Hybrid Knowledge Source → Local FAISS + Google search fallback
+✅ LLM-Powered Reasoning → Natural & context-aware answers
+✅ Document-Aware → Upload and query your own docs
+✅ Multilingual → All major Indian languages supported
+✅ Persistent Conversations → Saved in MongoDB
+✅ Efficient & Scalable → Quantized Llama 3 for optimized inference
 
-🧠 LLM-Powered Reasoning → Uses Llama 3 GGUF for natural, contextual answers.
+🛠️ Tech Stack
 
-🗂️ Document-Aware → Upload and query your own documents.
+LLM → Llama 3 (GGUF Quantized)
 
-🌏 Multilingual Support → Supports all major Indian languages.
+Retrieval → FAISS Vector Store
 
-💾 Persistent Conversations → Chat history saved in MongoDB for continuity.
+Search → SERP API + Web Fetcher
 
-⚡ Efficient & Scalable → Optimized retrieval with FAISS and modular architecture.
+Database → MongoDB
 
-📂 Tech Stack
+Language Support → IndicTrans2 Pipelines
 
-LLM: Llama 3 (GGUF)
-
-Retrieval: FAISS Vector Store
-
-Web Search: SERP API + Web Fetcher
-
-Database: MongoDB
-
-Language Support: Translation Pipelines (Indian Languages)
-
-Backend: Python
-
-
-
-🚀 Setup Instructions
-
-Follow these steps to set up and run the Smart Multilingual Assistant on your system.
+Backend → FastAPI (Python)
 
 📂 Project Structure
 smart-multilingual-assistant/
@@ -67,22 +58,22 @@ smart-multilingual-assistant/
 │   ├── requirements.txt
 │   └── ...
 
+🚀 Setup Instructions
 🔽 Step 1: Clone the Repository
 git clone https://github.com/Thanikarthik1/smart-multilingual-assistant.git
 cd smart-multilingual-assistant/offline-chatbot-main
 
 📥 Step 2: Create Model Folders
-
-Inside the project, create the following folders:
-
 mkdir -p llm/models
 mkdir -p llm/hf_models/indictrans2
 
 📥 Step 3: Download Required Models
 
 Llama 3 GGUF (Quantized)
+
 Download Meta-Llama-3-8B-Instruct.Q4_K_M.gguf
- and place it in:
+
+Place it in:
 
 llm/models/
 
@@ -99,13 +90,10 @@ Place them in:
 llm/hf_models/indictrans2/
 
 ⚙️ Step 4: Install Dependencies
-
-Make sure you have Python 3.10+ installed, then run:
-
 pip install -r requirements.txt
 
 
-📌 requirements.txt includes:
+📌 Key dependencies (requirements.txt):
 
 fastapi
 uvicorn
@@ -121,27 +109,39 @@ requests
 beautifulsoup4
 
 ▶️ Step 5: Run the Backend
-
-Start the FastAPI server:
-
 uvicorn server.main:app --reload
 
 
 The API will run at:
+👉 http://127.0.0.1:8000
 
-http://127.0.0.1:8000
+Test endpoints at:
+👉 http://127.0.0.1:8000/docs
 
+📊 Architecture (Optional Visual)
 
-You can test endpoints at:
-
-http://127.0.0.1:8000/docs
+(Add a diagram showing flow: User → Translation → FAISS + SERP → Llama 3 → MongoDB → Response)
 
 ✅ Features Recap
 
-🧠 Retrieval-Augmented Chatbot → Combines FAISS + Web search
+🧠 RAG Chatbot → FAISS + Web Search
 
-🌏 Multilingual → Indian language support with IndicTrans2
+🌏 Multilingual → Powered by IndicTrans2
 
-💾 Persistent Chat History → MongoDB storage
+💾 Persistent → MongoDB storage
 
-⚡ Efficient → Optimized with quantized Llama 3
+⚡ Optimized → Quantized Llama 3
+
+🤝 Contributing
+
+Contributions are welcome! 🎉
+
+Fork the repo
+
+Create a new branch (feature/my-feature)
+
+Commit changes (git commit -m "Added feature")
+
+Push (git push origin feature/my-feature)
+
+Open a Pull Request 🚀
